@@ -10,7 +10,8 @@ __updated__ = "2018-02-22"
 -------------------------------------------------------
 """
 # Imports
-#from [file] import [function]
+from functions import mixer
+from song import Song
 
 # Inputs
 print("This is a test")

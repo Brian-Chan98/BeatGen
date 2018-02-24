@@ -11,10 +11,11 @@ __updated__ = "2018-02-22"
 """
 #[import statements]
 import aifc, pydub
+from song import Song
 
 #[constants]
 
-def sound(sound):
+def mixer(song):
     """
     -------------------------------------------------------
     [function description]

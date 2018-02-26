@@ -164,6 +164,30 @@ def by_album(songs, album):
 
     return albums
 
+# def by_release_year(songs, release_year):
+#     """
+#     -------------------------------------------------------
+#     Creates a list of songs by origin.
+#     Use: v = by_release_year(songs, release_year)
+#     -------------------------------------------------------
+#     Preconditions:
+#         songs - a list of Song objects (list of Song)
+#         release_year - a song's release year (int)
+#     Postconditions:
+#         returns
+#         release_years - Song objects from songs that are from a particular year (list of Songs)
+#     -------------------------------------------------------
+#     """
+# #     assert genre in range(len(Song.GENRE))
+#     
+#     release_years = []
+#     
+#     for i in songs:
+#         if i.release_year == release_year:
+#             release_years.append(i)
+# 
+#     return release_years
+
 
 '''
 Unfinished universal search below

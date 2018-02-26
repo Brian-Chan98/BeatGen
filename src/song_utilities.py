@@ -32,9 +32,7 @@ def get_song():
     genre = int(input(": "))
     artist = input("Artist: ")
     album = input("Album: ")
-    release_year = int(input("Release year (int): "))
-    mood = int(input("Mood: "))
-    song = Song(track, name, genre, artist, album, release_year, mood)
+    song = Song(track, name, genre, artist, album)
     return song
 
 def read_song(line):
@@ -52,7 +50,7 @@ def read_song(line):
     -------------------------------------------------------
     """
     data = line.strip().split("|")
-    song = Song(data[0], data[1], data[2], data[3], data[4], int(data[5]), data[6])
+    song = Song(data[0], data[1], data[2], data[3], data[4])
     return song
 
 def read_songs(file_variable):
@@ -166,53 +164,6 @@ def by_album(songs, album):
 
     return albums
 
-def by_release_year(songs, release_year):
-    """
-    -------------------------------------------------------
-    Creates a list of songs by origin.
-    Use: v = by_release_year(songs, release_year)
-    -------------------------------------------------------
-    Preconditions:
-        songs - a list of Song objects (list of Song)
-        release_year - a song's release year (int)
-    Postconditions:
-        returns
-        release_years - Song objects from songs that are from a particular year (list of Songs)
-    -------------------------------------------------------
-    """
-#     assert genre in range(len(Song.GENRE))
-    
-    release_years = []
-    
-    for i in songs:
-        if i.release_year == release_year:
-            release_years.append(i)
-
-    return release_years
-
-def by_mood(songs, mood):
-    """
-    -------------------------------------------------------
-    Creates a list of songs by mood.
-    Use: v = by_mood(songs, mood)
-    -------------------------------------------------------
-    Preconditions:
-        songs - a list of Song objects (list of Song)
-        mood - a song's mood (str)
-    Postconditions:
-        returns
-        moods - Song objects from songs that are a particular mood (list of Songs)
-    -------------------------------------------------------
-    """
-#     assert genre in range(len(Song.GENRE))
-    
-    moods = []
-    
-    for i in songs:
-        if i.mood == mood:
-            mood.append(i)
-
-    return moods
 
 '''
 Unfinished universal search below

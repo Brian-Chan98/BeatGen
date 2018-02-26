@@ -13,7 +13,7 @@ __updated__ = "2018-02-24"
 from song import Song
 
 #[constants]
-# self, track, name, genre, artist, album, release_year, mood
+# self, track, name, genre, artist, album
 def get_song():
     """
     -------------------------------------------------------
@@ -43,7 +43,7 @@ def read_song(line):
     -------------------------------------------------------
     Preconditions:
         line - a vertical bar-delimited line of song data in the format
-          track|name|genre|artist|album|release_year|mood (str)
+          track|name|genre|artist|album (str)
     Postconditions:
         returns
         song - contains the data from line (Song)
@@ -130,7 +130,6 @@ def by_artist(songs, artist):
         artists - Song objects from songs that are by a particular artist (list of Songs)
     -------------------------------------------------------
     """
-#     assert genre in range(len(Song.GENRE))
     
     artists = []
     

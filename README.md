@@ -1,4 +1,4 @@
-# BeatGen by Sathusan Kandasamy
+# BeatGen by Sathusan Kandasamy and Brian Chan
 ------------------------------------------------------------------------------------
 This is a fun little project that will hopefully become polished over time.
 ------------------------------------------------------------------------------------

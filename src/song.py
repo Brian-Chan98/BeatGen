@@ -19,7 +19,9 @@ class Song:
     # Constants
     GENRE = ("Rock", "HipHop", "Pop", "Classical",
               "International", "R&B", "Soul", "Reggae",
-              "Jazz", "Bollywood")
+              "Jazz", "Bollywood", "K-pop", "Metal", "EDM",
+              "Chill", "Indie", "Latin", "Spanish", "Blues",
+              "Punk")
 
     @staticmethod
     def genres():

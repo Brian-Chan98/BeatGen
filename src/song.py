@@ -46,7 +46,7 @@ class Song:
         
         return string
     
-    def __init__(self, track, name, genre, artist, album, release_year, mood):
+    def __init__(self, track, name, genre, artist, album):
         """
         -------------------------------------------------------
         Initializes Song class.
@@ -58,23 +58,18 @@ class Song:
             genre - The song's genre
             artist - The song's artist
             album - Album of which the song is from
-            release_year - The year when the song was released
-            mood - How does it make you feel?
         Postconditions:
             Initializes a song that contains the music file, name,
             genre, artist, album name, release year, and mood.
         -------------------------------------------------------
         """
         assert genre in range(len(Song.GENRE)), "Invalid genre ID"
-        assert release_year > 0, "Year must be greater than 0"
         
         self.track = track
         self.name = name
         self.genre = genre
         self.artist = artist
         self.album = album
-        self.release_year = release_year
-        self.mood = mood
         
         return
     
@@ -93,9 +88,9 @@ class Song:
         -------------------------------------------------------
         """
         result = (self.track, self.name, self.genre, self.artist,
-                  self.album, self.release_year, self.mood) == (
+                  self.album) == (
             rs.track, rs.name, rs.genre, rs.artist,
-                  rs.album, rs.release_year, rs.mood)
+                  rs.album)
         return result
     
     def write(self, file_variable):
@@ -113,6 +108,6 @@ class Song:
         """
         print("{}|{}|{}|{}|{}|{}|{}"
               .format(self.track, self.name, self.genre, self.artist,
-                      self.album, self.release_year, self.mood),
+                      self.album),
               file=file_variable)
         return
